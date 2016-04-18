@@ -10,6 +10,7 @@ add virtualenv to install python packages
 
 # to run the play use playbook like
 
+```yaml
 - name: Deploy Harstorage
   hosts: all
   sudo: True
@@ -17,3 +18,4 @@ add virtualenv to install python packages
   roles:
     - mongo
     - harstorage
+```
