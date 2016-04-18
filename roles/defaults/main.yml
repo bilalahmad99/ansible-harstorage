@@ -1,0 +1,29 @@
+---
+
+harstorage_etc: '/etc/harstorage'
+harstorage_code_dir: '/home/harstorage'
+
+HARSTORAGE_REPOS:
+ - PROTOCOL: https
+   DOMAIN: github.com
+   PATH: pavel-paulau
+   REPO: harstorage
+   VERSION: master
+   DESTINATION: '{{ harstorage_code_dir }}'
+
+harstorage_debian_pkgs:
+  -  lib32stdc++6
+  -  python
+  -  python-cairo
+  -  python-rsvg
+  -  python-setuptools
+  -  python-pastescript
+ 
+harstorage_python_pkgs:
+  - { name: "pylons", version: "1.0.2"}
+  - { name: "webob", version: "1.5.1"}
+  - { name: "pymongo", version: "3.2.1"}
+
+harstorage_port: "5000"
+harstorage_host: "0.0.0.0"
+harstorage_version: "1.0"
